@@ -1,0 +1,13 @@
+.preview {
+  background-color: crimson;
+}
+
+hr {
+  border: 0;
+  border-top: 3px solid rgb(17, 84, 161);
+}
+
+.preview > h1 {
+  text-align: center;
+  margin: 0;
+}

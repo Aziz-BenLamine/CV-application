@@ -15,10 +15,12 @@ body {
 }
 
 .preview-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
   background-color: pink;
   width: 50%;
   height: 100vh;
-  float: right;
 }
 
 .form {
