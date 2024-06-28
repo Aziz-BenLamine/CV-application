@@ -1,12 +1,14 @@
 import "./styles/Preview.css";
-export default function Preview() {
+export default function Preview(props) {
   return (
     <div className="preview">
-      <h1>Aziz Ben Lamine</h1>
+      <h1>
+        {props.firstName} {props.lastName}
+      </h1>
       <h3>Profile</h3>
       <p>
-        azizbenlamine@gmail.com | 27-266-798 | Linkedin: Aziz Ben Lamine |
-        Github: Aziz-BenLamine
+        {props.email} | 27-266-798 | Linkedin: Aziz Ben Lamine | Github:
+        Aziz-BenLamine
       </p>
 
       <hr />

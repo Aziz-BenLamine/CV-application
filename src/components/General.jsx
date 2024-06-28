@@ -1,19 +1,34 @@
-export default function General() {
+export default function General(props) {
   return (
     <div className="form-element">
       <h1>Personal Detail</h1>
       <div className="input-grid">
         <div className="input-element">
           <label htmlFor="first-name">First Name</label>
-          <input type="text" id="first-name" />
+          <input
+            type="text"
+            id="first-name"
+            value={props.firstName}
+            onChange={(e) => props.onNameChange(e)}
+          />
         </div>
         <div className="input-element">
           <label htmlFor="last-name">Last Name</label>
-          <input type="text" id="last-name" />
+          <input
+            type="text"
+            id="last-name"
+            value={props.lastName}
+            onChange={(e) => props.onLastNameChange(e)}
+          />
         </div>
         <div className="input-element">
           <label htmlFor="email">Email</label>
-          <input type="email" id="email" />
+          <input
+            type="email"
+            id="email"
+            value={props.email}
+            onChange={(e) => props.onEmailChange(e)}
+          />
         </div>
         <div className="input-element">
           <label htmlFor="phone">Phone</label>
