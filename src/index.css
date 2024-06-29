@@ -1,34 +1,113 @@
-body {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-  width: 100%;
-  height: 100%;
-  margin: 0;
-}
+/* General App Styling */
 .app {
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Form Styling */
+.form {
+  width: 45%;
 }
 
 .preview-wrapper {
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: pink;
-  width: 50%;
-  height: 100vh;
+  width: 45%;
 }
 
-.form {
-  background-color: rgb(8, 125, 0);
-  width: 50%;
-  float: left;
+/* Education Entry Styling */
+.education-entry {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.form-element {
-  background-color: crimson;
+.education-entry:hover {
+  background-color: #f9f9f9;
+}
+
+/* Button Styling */
+.add-button,
+.delete-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.add-button:hover {
+  background-color: #0056b3;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  padding: 5px 10px;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Input Grid and Element Styling */
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.input-element {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-element label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-element input {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+/* Preview Styling */
+.preview {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.preview h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.preview h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.preview p {
+  margin-bottom: 10px;
+}
+
+.preview hr {
+  margin: 20px 0;
+}
+
+.preview ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.preview ul li {
+  margin-bottom: 5px;
 }

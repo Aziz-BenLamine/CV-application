@@ -1,14 +1,15 @@
 import "./styles/Preview.css";
-export default function Preview(props) {
+
+export default function Preview({ generalInfo, educations }) {
   return (
     <div className="preview">
       <h1>
-        {props.generalInfo.firstName} {props.generalInfo.lastName}
+        {generalInfo.firstName} {generalInfo.lastName}
       </h1>
       <h3>Profile</h3>
       <p>
-        {props.generalInfo.email} | {props.generalInfo.phone} | Linkedin: Aziz
-        Ben Lamine | Github: Aziz-BenLamine
+        {generalInfo.email} | {generalInfo.phone} | Linkedin: Aziz Ben Lamine |
+        Github: Aziz-BenLamine
       </p>
 
       <hr />
@@ -21,12 +22,14 @@ export default function Preview(props) {
       <hr />
 
       <h3>Education</h3>
-      <p>
-        <strong>{props.schoolName}</strong>, {props.location} &emsp; &emsp;{" "}
-        {props.degreeStart} - {props.degreeEnd}
-        <br />
-        {props.degree}
-      </p>
+      {educations.map((education) => (
+        <p key={education.id}>
+          <strong>{education.schoolName}</strong>, {education.location} &emsp;
+          &emsp; {education.degreeStart} - {education.degreeEnd}
+          <br />
+          {education.degree}
+        </p>
+      ))}
       <hr />
 
       <h3>Projects</h3>
