@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 export default function General(props) {
+  const [] = useState();
   return (
     <div className="form-element">
       <h1>Personal Detail</h1>
@@ -32,7 +35,12 @@ export default function General(props) {
         </div>
         <div className="input-element">
           <label htmlFor="phone">Phone</label>
-          <input type="tel" id="phone" />
+          <input
+            type="tel"
+            id="phone"
+            value={props.phone}
+            onChange={(e) => props.onPhoneChange(e)}
+          />
         </div>
         <div className="links">
           <h3>Links</h3>

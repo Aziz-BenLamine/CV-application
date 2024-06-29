@@ -7,7 +7,7 @@ export default function Preview(props) {
       </h1>
       <h3>Profile</h3>
       <p>
-        {props.email} | 27-266-798 | Linkedin: Aziz Ben Lamine | Github:
+        {props.email} | {props.phone} | Linkedin: Aziz Ben Lamine | Github:
         Aziz-BenLamine
       </p>
 
@@ -22,12 +22,15 @@ export default function Preview(props) {
 
       <h3>Education</h3>
       <p>
-        <strong>Esprit</strong>, Ariana, Tunisia
+        <strong>{props.schoolName}</strong>, {props.location} &emsp; &emsp;{" "}
+        {props.degreeStart} - {props.degreeEnd}
+        <br />
+        {props.degree}
       </p>
       <hr />
 
       <h3>Projects</h3>
-      <p>
+      <div>
         <ul>
           <strong>
             <li>2D Platformer Game</li>
@@ -39,7 +42,7 @@ export default function Preview(props) {
             player movement, collision detection, and level progression.
           </p>
         </ul>
-      </p>
+      </div>
       <hr />
 
       <h3>Skills</h3>
