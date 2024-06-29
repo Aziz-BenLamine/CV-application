@@ -3,12 +3,12 @@ export default function Preview(props) {
   return (
     <div className="preview">
       <h1>
-        {props.firstName} {props.lastName}
+        {props.generalInfo.firstName} {props.generalInfo.lastName}
       </h1>
       <h3>Profile</h3>
       <p>
-        {props.email} | {props.phone} | Linkedin: Aziz Ben Lamine | Github:
-        Aziz-BenLamine
+        {props.generalInfo.email} | {props.generalInfo.phone} | Linkedin: Aziz
+        Ben Lamine | Github: Aziz-BenLamine
       </p>
 
       <hr />

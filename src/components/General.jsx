@@ -1,7 +1,22 @@
 import { useState } from "react";
 
 export default function General(props) {
-  const [] = useState();
+  function handlefirstNameChange(e) {
+    props.setGeneralInfo({ ...props.generalInfo, firstName: e.target.value });
+  }
+
+  function handlelastNameChange(e) {
+    props.setGeneralInfo({ ...props.generalInfo, lastName: e.target.value });
+  }
+
+  function handleEmailChange(e) {
+    props.setGeneralInfo({ ...props.generalInfo, email: e.target.value });
+  }
+
+  function handleNumberChange(e) {
+    props.setGeneralInfo({ ...props.generalInfo, phone: e.target.value });
+  }
+
   return (
     <div className="form-element">
       <h1>Personal Detail</h1>
@@ -11,8 +26,8 @@ export default function General(props) {
           <input
             type="text"
             id="first-name"
-            value={props.firstName}
-            onChange={(e) => props.onNameChange(e)}
+            value={props.generalInfo.firstName}
+            onChange={(e) => handlefirstNameChange(e)}
           />
         </div>
         <div className="input-element">
@@ -20,8 +35,8 @@ export default function General(props) {
           <input
             type="text"
             id="last-name"
-            value={props.lastName}
-            onChange={(e) => props.onLastNameChange(e)}
+            value={props.generalInfo.lastName}
+            onChange={(e) => handlelastNameChange(e)}
           />
         </div>
         <div className="input-element">
@@ -29,8 +44,8 @@ export default function General(props) {
           <input
             type="email"
             id="email"
-            value={props.email}
-            onChange={(e) => props.onEmailChange(e)}
+            value={props.generalInfo.email}
+            onChange={(e) => handleEmailChange(e)}
           />
         </div>
         <div className="input-element">
@@ -38,8 +53,8 @@ export default function General(props) {
           <input
             type="tel"
             id="phone"
-            value={props.phone}
-            onChange={(e) => props.onPhoneChange(e)}
+            value={props.generalInfo.phone}
+            onChange={(e) => handleNumberChange(e)}
           />
         </div>
         <div className="links">
